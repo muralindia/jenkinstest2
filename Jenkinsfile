@@ -42,6 +42,6 @@ node {
    stage 'deploy Production'
    input 'Proceed?'
    sh 'echo "write your deploy code here"; sleep 3;'
-   sh 'cp target/*.jar target/prod'
+   sh 'rm target/prod && mkdir target/prod && cp target/*.jar target/prod'
    archiveArtifacts 'target/prod/*.jar'
 }
