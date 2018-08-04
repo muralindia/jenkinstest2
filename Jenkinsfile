@@ -36,11 +36,13 @@ node {
 
 
 node {
-   stage 'deploy Canary'
-   sh 'echo "write your deploy code here"; sleep 5;'
+   stage 'deploy SIT'
+   input 'Proceed?'
+   sh 'echo "write your deploy code here"; sleep 2;'
 
    stage 'deploy Production'
    input 'Proceed?'
-   sh 'echo "write your deploy code here"; sleep 6;'
-   archiveArtifacts 'target/*.jar'
+   sh 'echo "write your deploy code here"; sleep 3;'
+   sh 'mkdir target/prod'
+   archiveArtifacts 'target/prod/*.jar'
 }
