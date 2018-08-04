@@ -24,9 +24,9 @@ node {
 
    stage 'test'
    parallel 'test': {
-     sh "${Maven_Home}/bin/mvn test; sleep 2;"
+     sh "/opt/maven/apache-maven-3.5.4/bin/mvn test; sleep 2;"
    }, 'verify': {
-     sh "${Maven_Home}/bin/mvn verify; sleep 3"
+     sh "/opt/maven/apache-maven-3.5.4/bin/mvn verify; sleep 3"
    }
 
    stage 'archive'
