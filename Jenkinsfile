@@ -30,7 +30,8 @@ node {
    }
 
    stage 'archive'
-   archive 'target/*.jar'
+   //archive 'target/*.jar'
+   archiveArtifacts 'target/*.jar'
 }
 
 
@@ -41,5 +42,5 @@ node {
    stage 'deploy Production'
    input 'Proceed?'
    sh 'echo "write your deploy code here"; sleep 6;'
-   archive 'target/*.jar'
+   archiveArtifacts 'target/*.jar'
 }
