@@ -37,12 +37,11 @@ node {
 
 node {
    stage 'deploy SIT'
-   input 'Proceed?'
    sh 'echo "write your deploy code here"; sleep 2;'
 
    stage 'deploy Production'
    input 'Proceed?'
    sh 'echo "write your deploy code here"; sleep 3;'
-   sh 'mkdir target/prod'
+   sh 'rm target/prod && mkdir target/prod && cp target/*.jar target/prod'
    archiveArtifacts 'target/prod/*.jar'
 }
