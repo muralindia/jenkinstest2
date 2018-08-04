@@ -20,7 +20,7 @@ node {
    // set the version of the build artifact to the Jenkins BUILD_NUMBER so you can
    // map artifacts to Jenkins builds
    sh "/opt/maven/apache-maven-3.5.4/bin/mvn versions:set -DnewVersion=${env.BUILD_NUMBER}"
-   sh "/opt/maven/apache-maven-3.5.4/bin/mvn package deploy"
+   sh "/opt/maven/apache-maven-3.5.4/bin/mvn clean package deploy"
 
    stage 'test'
    parallel 'test': {
