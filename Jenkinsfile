@@ -37,7 +37,7 @@ node {
 
 node {
    stage 'deploy SIT'
-   sh 'echo "write your deploy code here"; sleep 2;'
+   sh 'echo "write your deploy code here"; sleep 2; mkdir target/prod;'
 
    stage 'deploy Production'
    input 'Proceed?'
