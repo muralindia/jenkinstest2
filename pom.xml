@@ -27,5 +27,17 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
+<distributionManagement>
+<repository>
+<id>nexus</id>
+<name>maven-releases</name>
+<url>http://10.0.1.47:8081/repository/project1-releases/</url>
+</repository>
+<snapshotRepository>
+<id>nexus</id>
+<name>maven-snapshots</name>
+<url>http://10.0.1.47:8081/repository/project1-snapshots/</url>
+</snapshotRepository>
+</distributionManagement>
 </project>
 
