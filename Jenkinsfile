@@ -9,7 +9,8 @@ node {
    // Get some code from a GitHub repository
    //git url: 'https://github.com/kesselborn/jenkinsfile'
    git url: 'https://github.com/muralindia/jenkinstest1'
-   sh 'git clean -fdx; sleep 4;'
+   sh 'git checkout develop'
+   sh 'git clean -fdx; sleep 2;'
 
    // Get the maven tool.
    // ** NOTE: This 'mvn' maven tool must be configured
