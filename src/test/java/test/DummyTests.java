@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class DummyTests {
   protected void run() {
-    System.out.print("Hello 8asdasasd88 Hello");
+    System.out.print("Hello develop 8asdasasd88 Hello");
   }
 
   @Test public void test1() {
